@@ -24,7 +24,7 @@ Mplus Group působí v 57 zemích, má přes 13 000 zaměstnanců a spolupracuje
 == Pobočky ==
 
 Česko: Praha, Ústí nad Labem, Kolín, Jihlava, Hradec Králové, Olomouc, Brno
-Slovensko: Nitra, Trnava, Šaľa
+Slovensko: Nitra, Trnava, Šaľa, Nové Zámky
 Polsko: Katowice, Gliwice, Żory
 
 == Služby ==
@@ -93,18 +93,22 @@ Mezi významné klienty patří: Vodafone, E.ON, Samsung, KFC, Starbucks, ČSOB 
 == Vedení ==
 
 - Petr Studnička — generální ředitel
-- Václav Nedbal — manažer CC
-- Daniel Kittnar — divizní ředitel
 - Petra Vaverková — divizní ředitelka
+- Václav Kroneisl -  divizní ředitel a ředitel dceřinné společnosti Mplus Atoda
+- Lubomír Hurban - divizní ředitel a ředitel dceřinné společnosti Mplus Slovakia
+- Grzegorz Pieciak - divizní ředitel a ředitel dceřinné společnosti Mplus Poland
+- Eliška Palková - HR ředitelka
+- Hana Tyrolová - Finanční ředitelka
+- Michael Paleček - IT ředitel
 
 == Kontakty ==
 
 Asistent: +420 222 111 888
-Prodej: sales@conectart.cz
-Kariéra: kariera@conectart.cz, +420 730 779 977
-Marketing: marketing@conectart.cz
-ISO/QA: iso@conectart.cz
-Obecně: info@conectart.cz
+Prodej: sales@mplusgroup.cz
+Kariéra: kariera@mplusgroup.cz, +420 730 779 977
+Marketing: marketing@mplusgroup.cz
+ISO/QA: iso@mplusgroup.cz
+Obecně: info@mplusgroup.cz
 
 == Sociální sítě ==
 

@@ -6,7 +6,7 @@ Používá FastAPI + Groq API (cloud LLM) + znalostní bázi o Mplus Czechia.
 import os
 from pathlib import Path
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, Response
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from groq import Groq
@@ -72,6 +72,16 @@ class ChatResponse(BaseModel):
 async def serve_frontend():
     html_file = Path(__file__).parent / "index.html"
     return HTMLResponse(html_file.read_text(encoding="utf-8"))
+
+
+@app.get("/widget.js")
+async def serve_widget():
+    """Servíruj widget skript pro vložení na externí stránky."""
+    js_file = Path(__file__).parent / "widget.js"
+    return Response(
+        content=js_file.read_text(encoding="utf-8"),
+        media_type="application/javascript",
+    )
 
 
 @app.post("/api/chat", response_model=ChatResponse)

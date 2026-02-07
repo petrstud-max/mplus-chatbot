@@ -7,17 +7,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --blue-dark: #002856;
-            --blue-medium: #003a75;
-            --blue-light: #004a96;
-            --gold: #FFC600;
-            --gold-hover: #e6b300;
+            --blue: #002856;
+            --blue-light: #003a75;
             --red: #FF4438;
+            --red-hover: #e63c31;
+            --gold: #FFC600;
+            --orange: #f4a810;
             --white: #ffffff;
-            --gray: #8899aa;
-            --gray-light: #1a3a5c;
-            --bg: #001a3a;
-            --card: #002044;
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #002856;
+            --text-light: #5a6d80;
+            --border: #e0e6ed;
         }
 
         * {
@@ -30,7 +31,7 @@
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
             background: var(--bg);
-            color: var(--white);
+            color: var(--text);
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -38,12 +39,11 @@
 
         /* Header */
         .header {
-            background: var(--blue-dark);
+            background: var(--blue);
             padding: 14px 24px;
             display: flex;
             align-items: center;
             gap: 16px;
-            border-bottom: 2px solid var(--gold);
         }
 
         .header-logo img {
@@ -54,7 +54,7 @@
         .header-divider {
             width: 1px;
             height: 32px;
-            background: var(--gray-light);
+            background: rgba(255,255,255,0.2);
         }
 
         .header-info h1 {
@@ -66,7 +66,7 @@
         .header-info p {
             font-size: 12px;
             font-weight: 300;
-            color: var(--gray);
+            color: rgba(255,255,255,0.6);
         }
 
         .header-status {
@@ -75,7 +75,7 @@
             align-items: center;
             gap: 6px;
             font-size: 12px;
-            color: var(--gray);
+            color: rgba(255,255,255,0.6);
         }
 
         .status-dot {
@@ -99,6 +99,7 @@
             display: flex;
             flex-direction: column;
             gap: 16px;
+            background: var(--bg);
         }
 
         .chat-container::-webkit-scrollbar {
@@ -110,7 +111,7 @@
         }
 
         .chat-container::-webkit-scrollbar-thumb {
-            background: var(--gray-light);
+            background: var(--border);
             border-radius: 3px;
         }
 
@@ -131,27 +132,27 @@
 
         .message-bot {
             background: var(--card);
-            color: var(--white);
+            color: var(--text);
             align-self: flex-start;
             border-bottom-left-radius: 4px;
-            border: 1px solid var(--gray-light);
-            border-left: 3px solid var(--gold);
+            box-shadow: 0 1px 4px rgba(0,40,86,0.08);
+            border-left: 3px solid var(--blue);
         }
 
         .message-user {
-            background: var(--blue-light);
+            background: var(--blue);
             color: var(--white);
             align-self: flex-end;
             border-bottom-right-radius: 4px;
-            border-right: 3px solid var(--gold);
+            box-shadow: 0 1px 4px rgba(0,40,86,0.15);
         }
 
         .message-typing {
             background: var(--card);
             align-self: flex-start;
             border-bottom-left-radius: 4px;
-            border: 1px solid var(--gray-light);
-            border-left: 3px solid var(--gold);
+            box-shadow: 0 1px 4px rgba(0,40,86,0.08);
+            border-left: 3px solid var(--blue);
             display: flex;
             gap: 5px;
             padding: 18px 22px;
@@ -160,7 +161,7 @@
         .typing-dot {
             width: 8px;
             height: 8px;
-            background: var(--gold);
+            background: var(--red);
             border-radius: 50%;
             animation: typing 1.4s infinite;
         }
@@ -183,28 +184,30 @@
         }
 
         .quick-btn {
-            background: transparent;
-            border: 1px solid var(--gold);
+            background: var(--card);
+            border: 1px solid var(--blue);
             border-radius: 20px;
             padding: 8px 18px;
             font-size: 13px;
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
             cursor: pointer;
-            color: var(--gold);
+            color: var(--blue);
             transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,40,86,0.06);
         }
 
         .quick-btn:hover {
-            background: var(--gold);
-            color: var(--blue-dark);
+            background: var(--red);
+            color: var(--white);
+            border-color: var(--red);
         }
 
         /* Input area */
         .input-area {
             padding: 16px 24px;
-            background: var(--blue-dark);
-            border-top: 1px solid var(--gray-light);
+            background: var(--white);
+            border-top: 1px solid var(--border);
             display: flex;
             gap: 12px;
         }
@@ -212,28 +215,29 @@
         .input-area input {
             flex: 1;
             padding: 14px 20px;
-            background: var(--blue-medium);
-            border: 1px solid var(--gray-light);
+            background: var(--bg);
+            border: 1px solid var(--border);
             border-radius: 24px;
             font-size: 15px;
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
-            color: var(--white);
+            color: var(--text);
             outline: none;
             transition: border-color 0.2s;
         }
 
         .input-area input::placeholder {
-            color: var(--gray);
+            color: var(--text-light);
         }
 
         .input-area input:focus {
-            border-color: var(--gold);
+            border-color: var(--blue);
+            box-shadow: 0 0 0 2px rgba(0,40,86,0.1);
         }
 
         .input-area button {
-            background: var(--gold);
-            color: var(--blue-dark);
+            background: var(--blue);
+            color: var(--gold);
             border: none;
             border-radius: 50%;
             width: 48px;
@@ -248,13 +252,14 @@
         }
 
         .input-area button:hover {
-            background: var(--gold-hover);
+            background: var(--red);
+            color: var(--white);
             transform: scale(1.05);
         }
 
         .input-area button:disabled {
-            background: var(--gray-light);
-            color: var(--gray);
+            background: var(--border);
+            color: var(--text-light);
             cursor: not-allowed;
             transform: none;
         }
@@ -264,17 +269,19 @@
             text-align: center;
             padding: 8px;
             font-size: 11px;
-            color: var(--gray);
-            background: var(--blue-dark);
+            color: var(--text-light);
+            background: var(--white);
+            border-top: 1px solid var(--border);
         }
 
         .footer a {
-            color: var(--gold);
+            color: var(--red);
             text-decoration: none;
+            font-weight: 400;
         }
 
         .footer a:hover {
-            color: var(--red);
+            text-decoration: underline;
         }
 
         /* Mobile */

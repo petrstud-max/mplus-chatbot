@@ -70,6 +70,12 @@ class ChatResponse(BaseModel):
     reply: str
 
 
+@app.get("/health")
+async def health_check():
+    """Health check endpoint — Render ho pinguje každých 14 min, aby server nespal."""
+    return {"status": "ok"}
+
+
 @app.get("/", response_class=HTMLResponse)
 async def serve_frontend():
     html_file = Path(__file__).parent / "index.html"
